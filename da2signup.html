@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            /* overflow: hidden; */
+        }
+        .hero{
+            height: 100%;
+            width:100%;
+            /* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(book-library-with-open-textbook.jpg); */
+            background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+          url(book-library-with-open-textbook.jpg)
+          ;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+        nav {
+        width: 100%;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      ul {
+        display: flex;
+        /* justify-content: baseline; */
+    align-items: center;
+        list-style-type: none;
+        margin: 10;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* background-color: rgb(243, 170, 69, 0.6); */
+        
+        background-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0));
+        height: 60px;
+
+
+        /* width: fit-content; */
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 8px;
+        /* background-color: rgb(243, 170, 69, 0.6); */
+        /* color: rgb(70, 42, 2); */
+        color: rgb(238, 183, 107);
+        text-align: center;
+        padding: 14px 16px;
+        /* word-spacing: 20px; */
+      }
+        .formbox{
+            width: 380px;
+            height: 605px;
+            position: relative;
+            margin: 5% auto;
+            /* background-color: white; */
+            background-image: linear-gradient(rgba(255, 228, 196, 0.8),rgba(255, 228, 196, 0.6));
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .buttonbox{
+            width:220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 20px 9px #230b021f;
+            border-radius: 30px;
+        }
+        .togglebutton{
+            padding: 10px 30px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+            text-align: center;
+        } 
+        #btn{
+            top:0;
+            left:0;
+            position: absolute;
+            width:100%;
+            height: 100%;
+            background: linear-gradient(to right, #c3784d,#674502);
+            border-radius: 30px;
+            transition: 0.5s;
+        }
+        .socials{
+            margin: 30px auto;
+            text-align: center;
+        }
+        .socials img{
+            width: 30px;
+            height: 30px;
+            margin: 0 12px;
+            box-shadow: 0 0 20px 0 rgb(20, 1, 1);
+            cursor: pointer;
+            border-radius: 100%;
+        }
+        .socials img{
+            width: 30px;
+            height: 30px;
+            margin: 0 12px;
+            /* box-shadow: 0 0 20px 0 rgb(20, 1, 1); */
+            cursor: pointer;
+            border-radius: 100%;
+            transition: 4s;
+        }
+        /* .socials img:hover{
+            
+            box-shadow: 0 0 20px 0 rgb(20, 1, 1);
+           
+        } */
+        .input-group{
+            top: 180px;
+            position: absolute;
+            width: 280px;
+            transition: 0.5s;
+        }
+        .inputfield{
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 40px;
+            border-left: 0px;
+            border-top: 0px;
+            border-right: 0px;
+            border-bottom: 1px solid rgb(53, 28, 3);
+            outline: none;
+            background: transparent;
+
+        }
+        .submitbutton{
+            width: 85%;
+            padding: 10px 30px;
+            cursor: pointer;
+            display: block;
+            margin: 5px 70px;
+            background: linear-gradient(to right, #ea8c60,#674502);
+            border: 0;
+            outline: none;
+            border-radius: 30px;
+        }
+        .checkbox{
+            margin: 30px 10px 30px 10px;
+             }
+        span{
+            color: beige;
+            font-size: 12px;
+            bottom: 68px;
+            position: absolute;
+        }
+        #left1{
+          margin-left: 100px;
+        }
+        
+
+        /* .NavBar1{
+         
+        margin-left: 1300px;  
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        background: transparent;
+          }
+
+        .NavBar2{
+         
+        margin-left: 0px;    
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        background: transparent; } */
+
+      
+        
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <ul>
+              <li>
+                <a
+                  href="./da2login.html"
+                  class="NavBar"
+                  id="left1"
+                  
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./da2signup.html"
+                  class="NavBar"
+                  >Sign-Up</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./mainpage.html"
+                  class="NavBar"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./books.html"
+                  class="NavBar"
+                  >Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./search.html"
+                  class="NavBar"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+        <!-- <nav>
+          <ul>
+            <li>
+              <a
+                href="./da2login.html"
+                class="NavBar1"
+                style="text-align: left;"
+               
+                >Login</a
+              >
+            </li>
+            <li>
+              <a
+                href="./da2signup.html"
+                class="NavBar2"
+                >Sign-Up</a
+              >
+            </li> 
+          </ul>
+        </nav> -->
+
+
+        <div class="formbox">
+            <div class="buttonbox">
+                <div id="btn"></div>
+                <button type="button" class="togglebutton" >Log In</button>
+                <!-- <button type="button" class="togglebutton" onclick="signup()">Register</button> -->
+                <!-- 755705 -->
+
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com"><img src="./iconmonstr-facebook-4-240.jpg" ></a>
+                <a href="https://www.instagram.com"><img src="./iconmonstr-instagram-14-240.jpg"></a>
+                <a href="https://www.twitter.com"><img src="./iconmonstr-twitter-4-240.jpg"></a>
+
+                
+    
+            </div>
+        </form>
+        <form class="input-group" id="signup" onsubmit="return validation()" action="signup.php" method="post" enctype="multipart/form-data">
+          
+            <input type="text" class="inputfield" placeholder="First Name"id="fname" required name="fname">
+            <!-- <input type="text" class="inputfield" placeholder="Last Name" required> -->
+            <input type="text" class="inputfield" placeholder="Registration Number" id="regno" name="regno" required>
+            
+            <input type="text" class="inputfield" placeholder="UserID" id="userid" required name="userid">
+            <input type="email" class="inputfield" placeholder="Email" required id="mail" name="mail">
+            <!-- <p class="inputfield">Gender: 
+                <input type="radio" id="M" name="Gender" value="Male"> 
+                <label for="M"> Male </label>
+                <input type="radio" id="F" name="Gender" value="Female"> 
+                <label for="F"> Female </label>
+                <input type="radio" id="O" name="Gender" value="Others"> 
+                <label for="O"> Others </label></p> -->
+            <input type="password" class="inputfield" placeholder="Password" id="pswd" required name="pswd">
+            <input type="password" class="inputfield" placeholder="Re-Enter Password" id="repswd" name="repswd" required>
+            <input type="checkbox" class="checkbox" id="ckbx"><label for="ckbx">I agree to the terms and conditions</label>
+          
+            <button type="submit" class="submitbutton">Sign-UP</button>
+          </td>
+         
+        </form>
+    </div>
+    
+</div>
+<script>
+  
+  var email = document.getElementById("mail");
+  function validation(){
+  {
+  if(email.value == "") {
+        alert("Enter Proper E-mail");
+        return false;
+    }
+    if(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(email.value)) {
+        alert("Invalid E-mail");
+        return false;
+    }
+    
+  }
+}
+
+
+
+</script>
+
+
+</body>
+</html>

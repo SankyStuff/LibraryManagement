@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        /* border: 0 auto; */
+        padding: 0;
+        margin: 0;
+        
+            font-family: sans-serif;
+            
+      }
+      .hero {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(book-library-with-open-textbook.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+      }
+      nav {
+        width: 100%;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      ul {
+        display: flex;
+        /* justify-content: baseline; */
+    align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0));
+        height: 60px;
+        /* width: fit-content; */
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 8px;
+        /* background-color: rgb(243, 170, 69, 0.6); */
+        /* color: rgb(70, 42, 2); */
+        color: rgb(238, 183, 107);
+        text-align: center;
+        padding: 14px 16px;
+        /* word-spacing: 20px; */
+      }
+      .formbox {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 6% auto;
+        /* background-color: rgb(243, 170, 69, 0.6); */
+        /* background-color: rgba(255, 255, 255, 0.6); */
+        background-image: linear-gradient(rgba(115, 65, 18, 0),rgba(115, 65, 18, 0.6));
+        padding: 5px;
+      }
+
+      #name {
+        text-align: center;
+        /* font-size:xx-large; */
+        /* color: rgb(243, 198, 161); */
+        color: rgb(242, 167, 61)
+      }
+      #intro{
+        color: rgb(209, 183, 144);
+      }
+      table {
+        position: absolute;
+        margin: 45px;
+
+        margin-left: 300px;
+        margin-right: auto;
+        width: 60%;
+        box-sizing: border-box;
+        border: solid 5px palegoldenrod;
+      }
+      td{
+        padding: 5px 10px 5px 10px;
+        text-align: center;
+        border: solid 2px palegoldenrod;
+        color: rgb(209, 183, 144);
+      }
+      th {
+        padding: 5px 10px 5px 10px;
+        text-align: center;
+        border: solid 2px palegoldenrod;
+      }
+      .contact {
+        margin-top: 200px;
+      }
+      h2 {
+        text-align: center;
+        text-decoration: wavy;
+        /* color: rgb(70, 42, 2); */
+        /* color: rgb(243, 198, 161); */
+        color: rgb(242, 167, 61)
+        
+      }
+      #phone {
+        text-align: center;
+        margin-top: 5px;
+        color: rgb(209, 183, 144);
+      }
+      #mail {
+        text-align: center;
+        color: rgb(209, 183, 144);
+      }
+      #costing{
+        text-align: center;
+        color: rgb(209, 183, 144);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="./da2login.html"
+              class="NavBar"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              href="./da2signup.html"
+              class="NavBar"
+              >Sign-Up</a
+            >
+          </li>
+          <li>
+            <a
+              href="./mainpage.html"
+              class="NavBar"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./books.html"
+              class="NavBar"
+              >Books</a
+            >
+          </li>
+          <li>
+            <a
+              href="./search.html"
+              class="NavBar"
+              >Search</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="formbox">
+        <h1 id="name" ><u>Institute Online Library Management</u></h1>
+        <pre>
+
+        </pre>
+        <p id="intro">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero nemo
+          quas, adipisci animi aperiam nam ut corporis quisquam dolor, totam
+          obcaecati blanditiis. Dolorem debitis minus esse adipisci ad quisquam
+          voluptates molestiae optio recusandae, veritatis sapiente nam
+          perferendis eaque est quos rem nostrum, saepe velit atque, nisi
+          tenetur dicta. Totam vitae nisi animi labore repellat odio dolor quam
+          modi numquam sequi assumenda cum, sint pariatur corrupti? Error,
+          veniam? Officia fuga officiis amet corporis reiciendis at doloremque
+          provident! Sunt, libero.
+        </p>
+        <table>
+          <th colspan="2"><h2 onmouseover="underline(this)" onmouseout="nounderline(this)">Library Timings</h2></th>
+          <tr>
+            <td>Opening Time</td>
+            <td>8:00 am</td>
+          </tr>
+          <tr>
+            <td>Closing Time</td>
+            <td>10:00 pm</td>
+          </tr>
+        </table>
+
+        <div class="contact">
+          <h2 id="contactus" onmouseover="underline(this)" onmouseout="nounderline(this)">Contact Details</h2>
+          <div id="phone">Ph. No- +91 - 987654321</div>
+          <div id="mail">E-mail ID- library@librarymail.com</div>
+        </div>
+
+        <div class="Cost" id="cost"><h2 onmouseover="underline(this)" onmouseout="nounderline(this)">Library Pricing</h2></div>
+        <script>
+          document.getElementById("cost").onclick = function() {Libcost()};
+          
+          function Libcost() {
+            document.getElementById("cost").innerHTML = "<p><h2> Rs. 250/month <h2><p>";
+          }
+
+          
+function underline(x) {
+  x.style.textDecoration = "underline";
+  
+}
+
+function nounderline(x) {
+  x.style.textDecoration = "none";
+  
+}
+
+          </script>
+      </div>
+    </div>
+  </body>
+</html>

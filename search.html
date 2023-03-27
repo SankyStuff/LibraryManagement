@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+        /* border: 0 auto; */
+        padding: 0;
+        margin: 0;
+        
+            font-family: sans-serif;
+            
+      }
+      .hero {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url(book-library-with-open-textbook.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+      }
+      nav {
+        width: 100%;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      ul {
+        display: flex;
+        /* justify-content: baseline; */
+    align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0));
+        height: 60px;
+        /* width: fit-content; */
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        padding: 8px;
+        /* background-color: rgb(243, 170, 69, 0.6); */
+        /* color: rgb(70, 42, 2); */
+        color: rgb(238, 183, 107);
+        text-align: center;
+        padding: 14px 16px;
+        /* word-spacing: 20px; */
+      }
+      .formbox{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: 6% auto;
+            /* background-color: rgb(243, 170, 69, 0.6); */
+            /* background-color: rgba(255, 255, 255, 0.6); */
+            background-image: linear-gradient(rgba(115, 65, 18, 0),rgba(115, 65, 18, 0.6));
+            padding: 5px;
+        }
+        #name
+    {
+        text-align: center;
+        /* font-size:xx-large; */
+        /* color: rgb(243, 198, 161); */
+        color: rgb(242, 167, 61)
+
+    }
+    .searchclass{
+      margin: 25px 25px;
+      padding: 10px 10px;
+    }
+    form{
+      margin-top: 20px;
+      margin-left: 35px;
+      text-align: center;
+        
+        color: rgb(209, 183, 144);
+      
+    }
+    table{
+        position: absolute;
+        margin: 45px;
+        margin-left: 300px;
+        /* margin-left: auto;
+        margin-right: auto ; */
+        width: 60%;
+        box-sizing: border-box;
+        border: solid 5px palegoldenrod;
+    }
+    th{
+        padding: 5px 10px 5px 10px;
+        text-align: center;
+        border: solid 2px palegoldenrod;
+        /* color: rgb(70, 42, 2); */
+        color: rgb(242, 167, 61)
+        
+    }
+    td{
+        padding: 3px 7px 3px 7px;
+        text-align: center;
+        border: solid 2px palegoldenrod;
+        /* color: rgb(243, 198, 161); */
+        color: rgb(209, 183, 144);
+    }
+    #checkboxdiv{
+      width: 80%;
+     /* position: relative; */
+     margin: auto;
+
+    }
+    .checkbox{
+            margin: 10px 10px;
+            padding: 5px;
+            text-align: center;
+             }
+             #submitbutton{
+  width: 15%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #f7c478,#e6b043);
+  color: #000;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+.searchclass{
+  background-color: rgba(255, 228, 196, 0.637);
+  border-radius: 10px;
+  color: rgb(76, 52, 4);
+}
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav >
+            <ul onmouseover="DarkNav(this)" onmouseout="NormalNav(this)">
+              <li>
+                <a
+                  href="./da2login.html"
+                  class="NavBar"
+                  
+                  >Login</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./da2signup.html"
+                  class="NavBar"
+                  
+                  >Sign-Up</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./mainpage.html"
+                  class="NavBar"
+                  
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./books.html"
+                  class="NavBar"
+                  
+                  >Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./search.html"
+                  class="NavBar"
+                  
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="formbox">
+
+            <h1 id="name" onmouseover="nounderline(this)" onmouseout="underline(this)">Search Books</h1>
+            <form>
+              <label for="bk_name" class="searchclassl">Name of the Book:</label>
+              <input type="text" id="bk_name" class="searchclass"> 
+              <label for="au_name" class="searchclassl">Name of the Author:</label>
+              <input type="text" id="au_name" class="searchclass"> <div id="checkboxdiv">
+                <input type="checkbox" class="checkbox" id="ckbx1"><label for="ckbx1">Romance</label>
+                <input type="checkbox" class="checkbox" id="ckbx2"><label for="ckbx2">Fiction</label>
+                <input type="checkbox" class="checkbox" id="ckbx3"><label for="ckbx3">Computer Science</label>
+                <input type="checkbox" class="checkbox" id="ckbx5"><label for="ckbx5">Management</label>
+                <!-- <input type="checkbox" class="checkbox" id="ckbx4"><label for="ckbx4">Remember Password</label> -->
+                <p>
+                
+                <input type="checkbox" class="checkbox" id="ckbx6"><label for="ckbx6">Physics</label>
+                <input type="checkbox" class="checkbox" id="ckbx7"><label for="ckbx7">Technology</label>
+                <input type="checkbox" class="checkbox" id="ckbx8"><label for="ckbx8">Philosophy</label>
+                <input type="checkbox" class="checkbox" id="ckbx9"><label for="ckbx9">Mathematics</label><p>
+                <input type="checkbox" class="checkbox" id="ckbx10"><label for="ckbx10">Chemistry</label>
+                <input type="checkbox" class="checkbox" id="ckbx11"><label for="ckbx11">Electronics</label>
+                <input type="checkbox" class="checkbox" id="ckbx12"><label for="ckbx12">Language</label>
+                
+                <input type="checkbox" class="checkbox" id="ckbx16"><label for="ckbx16">Periodicals</label><p>
+                                </div>
+                                <button type="submit" id="submitbutton">Search</button>
+
+            </form>
+            <table id="Books">
+        
+              <!-- <th> -->
+                  <th>Sr.No</th>
+                  <th>Name of Books</th>
+                  <th>Author Name</th>
+                  <th>Book ID</th>
+                  <th>Copies</th>
+              <!-- </th> -->
+              <tr>
+              <td>1.</td>
+              <td>Book A</td>
+              <td>Tammy J.</td>
+              <td>IB0098711304</td>
+              <td>3</td>
+          </tr>
+          <tr>
+              <td>2.</td>
+              <td>Book B.</td>
+              <td>Jose M.</td>
+              <td>IB9876987612</td>
+              <td>5</td>
+          </tr>
+            </table>
+          </div>
+    </div>
+    <script>
+      function underline(x) {
+  x.style.textDecoration = "underline";
+  
+}
+
+function nounderline(x) {
+  x.style.textDecoration = "none";
+  
+}
+    </script>
+      
+</body>
+</html>
